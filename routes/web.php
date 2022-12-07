@@ -27,6 +27,8 @@ Route::get('/contact', [PagesController::class, 'viewContact'])->name('contact')
 Route::get('/tickets', [TicketsController::class, 'listTickets'])->name('listTickets')->middleware('auth');
 Route::get('/admin/add-event', [EventsController::class, 'addEvent'])->name('add-event')->middleware('auth');
 Route::post('/admin/add-event', [EventsController::class, 'processAddEvent'])->name('processAddEvent')->middleware('auth');
+Route::get('/admin/admin-home', [PagesController::class, 'adminHome'])->name('admin-home')->middleware('auth');
+
 
 Route::get('/testroute2', [PagesController::class, 'showTest2']);
 

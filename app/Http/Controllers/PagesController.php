@@ -21,4 +21,8 @@ class PagesController extends Controller
     public function showTest2() {
         return view('test2');
     }
+
+    public function adminHome(){
+        return view('admin-home');
+    }
 }
