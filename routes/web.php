@@ -28,6 +28,7 @@ Route::get('/tickets', [TicketsController::class, 'listTickets'])->name('listTic
 Route::get('/admin/add-event', [EventsController::class, 'addEvent'])->name('add-event')->middleware('auth');
 Route::post('/admin/add-event', [EventsController::class, 'processAddEvent'])->name('processAddEvent')->middleware('auth');
 Route::get('/admin/admin-home', [PagesController::class, 'adminHome'])->name('admin-home')->middleware('auth');
+Route::get('/delete-event{eventId}', [EventsController::class, 'deleteEvent'])->name('delete-event');
 
 
 Route::get('/testroute2', [PagesController::class, 'showTest2']);

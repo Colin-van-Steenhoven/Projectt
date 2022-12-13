@@ -45,3 +45,12 @@ label {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+Table{
+    margin: 20px;
+}
+tbody{
+    margin-top: 10px;
+}
+tr{
+    margin-left: 10px;
+}
