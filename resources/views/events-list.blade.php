@@ -2,6 +2,11 @@
 
 @section('content')
 
+<div class="headTextEventList">
+    <h1>Manage events here</h1>
+</div>
+
+
 <Table>
     <thead>
         <th>
@@ -25,11 +30,14 @@
                 <a href="{{ route('delete-event', $event->id) }}">Delete</a>
             </td>
             <td>
-                <a href="{{}}">Change</a>
+                <a >Change</a>
             </td>
         </tr>
         @endforeach
     </tbody>
 </Table>
 
+<button class="addEventBtn">
+    <a href="{{ route('add-event-form') }}">Add Event</a>
+</button>
 @endsection

@@ -25,10 +25,10 @@ Route::get('/', [PagesController::class, 'showHome'])->name('home');
 Route::get('/about-us', [PagesController::class, 'viewAboutUs'])->name('about-us');
 Route::get('/contact', [PagesController::class, 'viewContact'])->name('contact');
 Route::get('/tickets', [TicketsController::class, 'listTickets'])->name('listTickets')->middleware('auth');
-Route::get('/admin/add-event', [EventsController::class, 'addEvent'])->name('add-event')->middleware('auth');
-Route::post('/admin/add-event', [EventsController::class, 'processAddEvent'])->name('processAddEvent')->middleware('auth');
-Route::get('/admin/admin-home', [PagesController::class, 'adminHome'])->name('admin-home')->middleware('auth');
+Route::get('/add-event', [EventsController::class, 'addEvent'])->name('add-event')->middleware('auth');
 Route::get('/delete-event{eventId}', [EventsController::class, 'deleteEvent'])->name('delete-event');
+Route::get('/add-event-form', [PagesController::class, 'addEvent'])->name('add-event-form')->middleware('admin');
+Route::post('/add-event-form', [EventsController::class, 'processAddEvent'])->name('save-event-form');
 
 
 Route::get('/testroute2', [PagesController::class, 'showTest2']);

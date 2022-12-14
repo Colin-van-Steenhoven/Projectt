@@ -54,3 +54,19 @@ tbody{
 tr{
     margin-left: 10px;
 }
+.headTextEventList{
+    margin-top: 20px;
+    border: 2px solid;
+}
+.headTextEventList h1{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.addEventBtn{
+    margin: 20px;
+    border: 2px solid;
+}
+.addEventBtn a{
+    margin: 10px;
+}

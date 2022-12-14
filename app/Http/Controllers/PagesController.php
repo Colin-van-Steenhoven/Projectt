@@ -25,4 +25,7 @@ class PagesController extends Controller
     public function adminHome(){
         return view('admin-home');
     }
+    public function addEvent(){
+        return view('add-event-form');
+    }
 }
