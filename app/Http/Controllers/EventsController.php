@@ -36,4 +36,12 @@ class EventsController extends Controller
 
         return redirect()->route('add-event');
     }
+    public function listEvents(){
+        // ophalen van data uit database
+        $events = Event::all();
+
+        return view('list-events', [
+            'events' => $events,
+        ]);
+    }
 }

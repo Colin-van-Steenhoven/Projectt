@@ -70,3 +70,9 @@ tr{
 .addEventBtn a{
     margin: 10px;
 }
+.btn-border{
+    border: rgb(140, 196, 223) 1px solid;
+}
+.btn-dark{
+    background: #272727;
+}

@@ -37,7 +37,7 @@
     </tbody>
 </Table>
 
-<button class="addEventBtn">
-    <a href="{{ route('add-event-form') }}">Add Event</a>
+<button class="btn btn-dark btn-send btn-border pt-2 btn-block">
+    <a style="pointer-events: none;" href="{{ route('add-event-form') }}" >Add Event</a>
 </button>
 @endsection

@@ -76,8 +76,7 @@
                     <div class="col-md-12">
 
                         <div class="col-md-12 text-center">
-                        <input type="submit" class="btn btn-dark btn-send  pt-2 btn-block
-                            " value="Verzend bericht" >
+                        <input type="submit" class="btn btn-dark btn-send btn-border pt-2 btn-block" value="Verzend bericht" >
                         </div>
                         
                     

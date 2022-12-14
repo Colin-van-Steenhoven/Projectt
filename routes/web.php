@@ -29,6 +29,7 @@ Route::get('/add-event', [EventsController::class, 'addEvent'])->name('add-event
 Route::get('/delete-event{eventId}', [EventsController::class, 'deleteEvent'])->name('delete-event');
 Route::get('/add-event-form', [PagesController::class, 'addEvent'])->name('add-event-form')->middleware('admin');
 Route::post('/add-event-form', [EventsController::class, 'processAddEvent'])->name('save-event-form');
+Route::get('/events', [EventsController::class, 'listEvents'])->name('list-events')->middleware('auth');
 
 
 Route::get('/testroute2', [PagesController::class, 'showTest2']);
