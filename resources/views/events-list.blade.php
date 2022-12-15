@@ -30,7 +30,7 @@
                 <a href="{{ route('delete-event', $event->id) }}">Delete</a>
             </td>
             <td>
-                <a >Change</a>
+                <a href="{{ route('change-event-form', $event->id) }}">Change</a>
             </td>
         </tr>
         @endforeach

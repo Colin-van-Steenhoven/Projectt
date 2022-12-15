@@ -21,6 +21,11 @@ class EventsController extends Controller
 
         return redirect()->route('add-event');
     }
+    public function changeEvent($eventId){
+        $event = Event::findOrFail($eventId);
+
+        return view('change-event-form', ['event' => $event]);
+    }
     public function processAddEvent(Request $request){
         $newEvent = new Event();
         $newEvent->name = $request->name;
