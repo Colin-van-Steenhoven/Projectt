@@ -31,7 +31,7 @@ Route::get('/add-event-form', [PagesController::class, 'addEvent'])->name('add-e
 Route::post('/add-event-form', [EventsController::class, 'processAddEvent'])->name('save-event-form');
 Route::get('/events', [EventsController::class, 'listEvents'])->name('list-events')->middleware('auth');
 Route::get('/change-event-form{eventId}', [EventsController::class, 'changeEvent'])->name('change-event-form')->middleware('admin');
-Route::post('/change-event-form', [EventsController::class, 'processChangeEvent'])->name('save-event-form');
+Route::post('/change-event-form{eventId}', [EventsController::class, 'processChangeEvent'])->name('save-change-event-form');
 
 Route::get('/testroute2', [PagesController::class, 'showTest2']);
 

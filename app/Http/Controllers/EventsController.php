@@ -41,6 +41,20 @@ class EventsController extends Controller
 
         return redirect()->route('add-event');
     }
+    public function processChangeEvent($eventId, Request $request){
+        $event = Event::where("id", $eventId)->first();
+        $event->name = $request->input('name');
+        $event->photo = $request->input('photo');
+        $event->event_start = $request->input('event_start');
+        $event->event_end = $request->input('event_end');
+        $event->available_tickets = $request->input('available_tickets');
+        $event->location = $request->input('location');
+        $event->price = $request->input('price');
+        $event->description = $request->input('description');
+        $event->save();
+
+        return redirect()->route('add-event');
+    }
     public function listEvents(){
         // ophalen van data uit database
         $events = Event::all();
