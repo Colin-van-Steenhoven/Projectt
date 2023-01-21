@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class TicketsController extends Controller
 {
     public function listTickets() {
-        $tickets = Ticket::where('owner', Auth::id())->get();
+        $tickets = Ticket::where('id', Auth::id())->get();
         return view('tickets.list', [
             'tickets' => $tickets,
         ]);

@@ -10,6 +10,16 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{ route('home')}}">Home</a>
         </li>
+        @if(Auth::user())
+            @if(Auth::user()->is_admin)
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('add-event')}}">Events</a>
+            </li>
+              @endif
+            @endif
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('list-events')}}">Tickets kopen</a>
+            </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('about-us')}}">Over ons</a>
         </li>
